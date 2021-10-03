@@ -89,7 +89,7 @@ replicas: {{ .Values.replicas }}
 
 ...
 
-image: nginx:1.14.2
+image: quay.io/testing-farm/nginx:1.14.2
 
 меняем на
 
@@ -102,7 +102,7 @@ image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
 replicas: 3
 
 image:
-  repository: nginx
+  repository: quay.io/testing-farm/nginx
   tag: 1.12
 ```
 
@@ -137,14 +137,6 @@ name: nginx-deployment
 name: {{ .Chart.Name }}-{{ .Release.Name }}
 
 ---
-
-      containers:
-      - name: nginx
-
-меняем на
-
-      containers:
-      - name: {{ .Chart.Name }}
 
 ```
 

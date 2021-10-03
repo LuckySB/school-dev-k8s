@@ -19,7 +19,7 @@ spec:
         app: fileshare
     spec:
       initContainers:
-      - image: busybox
+      - image: quay.io/libpod/busybox:1.26.1
         name: mount-permissions-fix
         command: ["sh", "-c", "chmod 777 /data"]
         volumeMounts:

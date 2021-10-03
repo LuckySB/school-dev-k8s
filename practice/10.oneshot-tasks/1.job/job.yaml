@@ -10,7 +10,7 @@ spec:
     spec:
       containers:
       - name: hello
-        image: quay.io/prometheus/busybox
+        image: quay.io/libpod/busybox:1.26.1
         args:
         - /bin/sh
         - -c
